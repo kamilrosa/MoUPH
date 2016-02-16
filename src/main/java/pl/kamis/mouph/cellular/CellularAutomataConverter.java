@@ -5,7 +5,6 @@ import pl.kamis.mouph.rule.Rule;
 public class CellularAutomataConverter {
 
     public boolean[] closeCircleAutomatConverter(Rule rule, boolean[] binaryMessage, int iterations) {
-        long start = System.currentTimeMillis();
         for (int j = 0; j < iterations; j++) {
             int length = binaryMessage.length;
             for (int i = 0; i < binaryMessage.length; i++) {
@@ -18,8 +17,6 @@ public class CellularAutomataConverter {
                 }
             }
         }
-        long end = System.currentTimeMillis();
-        System.out.println("TOTAL CIRCLE TIME : " + ((end - start) / 1000));
         return binaryMessage;
     }
 }
